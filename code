@@ -1,0 +1,23 @@
+---
+title: "test"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Library renv 
+Then you can use activate to activate the project and set the working directory to where the project documents are (see github renv).
+Then you can see that forecast is installed in the the locked or renv folder, but not in the regular one.  
+Then to deactivate use dacatvite to go back to the original
+```{r}
+library(renv)
+renv::activate()
+renv::init()
+library(forecast)
+renv::snapshot()
+renv::deactivate()
+
+
+```
+
